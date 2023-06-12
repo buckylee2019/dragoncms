@@ -8,13 +8,22 @@ DEBUG = True
 
 ALLOWED_HOSTS = "*"
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ibmcms',
+        'USER': 'ibmcms_user',
+        'PASSWORD': 'Bph4TCO1M4uElPliiQHLF5NoC1EZdaHc',
+        'HOST': 'dpg-ci3igvjhp8u1a18trkb0-a',
+        'PORT': '5432'
     }
 }
-
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
